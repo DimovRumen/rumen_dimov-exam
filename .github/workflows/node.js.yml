@@ -22,10 +22,12 @@ jobs:
       with:
         node-version: 14.x
         cache: 'npm'
-    - run: npm install
-   
-    - run: npm run test:unit
-    - run: echo "rumen_dimov"
+    - name: Starting NPM INSTALL
+      run: npm install
+    - name: Running Unit Test
+      run: npm run test:unit
+    - name: Display SoftUni Username
+      run: echo "rumen_dimov"
 
     - name: Deploy to Render  
       uses: johnbeynon/render-deploy-action@v0.0.8 
