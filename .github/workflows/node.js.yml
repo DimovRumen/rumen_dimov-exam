@@ -54,3 +54,9 @@ jobs:
         with:
           node-version: 14.x
           cache: 'npm'
+      - name: Starting NPM INSTALL
+        run: npm install
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Running UI Test
+        run: npm run test:ui
