@@ -26,3 +26,9 @@ jobs:
    
     - run: npm run test:unit
     - run: echo "rumen_dimov"
+
+    - name: Deploy to Render  
+      uses: johnbeynon/render-deploy-action@v0.0.8 
+      with: 
+       service-id: ${{ secrets.SERVICE_ID }} 
+       api-key: ${{ secrets.RENDER_API }}  
